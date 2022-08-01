@@ -4,37 +4,40 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Нёрдс</title>
+ <link rel="stysheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
   <link href="normalize.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <link rel="icon" href="favicon.ico">
 </head>
 
-<body>
-  <header>
-    <nav>
-      <a href="index.html">
+<body class="page-body inner-page">
+  <header clas="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo" href="index.html">
         <img src="img/nerds-logo.svg" width="160" height="49" alt="Логотип">
       </a>
-      <ul>
+      <ul class="site-navigation">
         <li><a href="blank.html">Студия</a></li>
         <li><a href="blank.html">Клиенты</a> </li>
-        <li><a>Магазин</a></li>
+        <li class="site-navigation-current"><a>Магазин</a></li>
         <li><a href="blank.html">Контакты</a></li>
       </ul>
+      <div class="user-navigation">
       <img src="img/icons/cart-icon.svg" width="15" height="15" alt="Корзина">
       <a href="blank.html">Корзина</a>
+      </div>
     </nav>
   </header>
 
-  <main>
-    <h1>
+  <main class="page-catalog container">
+    <h1 class="page-title">
         Магазин готовых шаблонов
     </h1>
-    <section>
+    <section class="filters" >
         <h2>
             Фильтр товаров
         </h2>
-        <form method="get" action="https://echo.htmlacademy.ru">
+        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
             <fieldset>
                 <legend>Стоимость:</legend>
                 <input type="range" id="priceslider" name="priceslider" min="o" max="150000" step="1">
@@ -46,16 +49,16 @@
             <fieldset>
                 <legend>Сетка</legend>
                 <ul>
-                    <li>
-                        <input type="radio" name="grid" value="adaptive" id="filter-adaptive">
+                    <li class="filter-option filter-radio">
+                        <input class="filter-input-radio filter-input" type="radio" name="grid" value="adaptive" id="filter-adaptive">
                         <label for="filter-adaptive">Адаптивная</label>
                     </li>
-                    <li>
-                        <input type="radio" name="grid" value="fix" id="filter-fix">
+                    <li class="filter-option filter-radio">
+                        <input class="filter-input-radio filter-input" type="radio" name="grid" value="fix" id="filter-fix">
                         <label for="filter-fix">Фиксированная</label>
                     </li>
-                    <li>
-                        <input type="radio" name="grid" value="rubber" id="filter-rubber">
+                    <li class="filter-option filter-radio">
+                        <input class="filter-input-radio filter-input" type="radio" name="grid" value="rubber" id="filter-rubber">
                         <label for="filter-rubber">Резиновая</label>
                     </li>
                 </ul>
@@ -64,29 +67,29 @@
             <fieldset>
                 <legend>Особенности:</legend>
                 <ul>
-                    <li>
-                        <input type="checkbox" name="slider" id="filter-slider" checked>
+                    <li class="filter-option filter-checkbox">
+                        <input class="filter-input-checkbox filter-input" type="checkbox" name="slider" id="filter-slider" checked>
                         <label for="filter-slider">Слайдер</label>
                     </li>
-                    <li>
-                        <input type="checkbox" name="advantages" id="filter-advantages">
+                    <li class="filter-option filter-checkbox" >
+                        <input class="filter-input-checkbox filter-input" type="checkbox" name="advantages" id="filter-advantages">
                         <label for="filter-advantages">Блок преимуществ</label>
                     </li>
-                    <li>
-                        <input type="checkbox" name="news" id="filter-news" checked>
+                    <li class="filter-option filter-checkbox">
+                        <input class="filter-input-checkbox filter-input" type="checkbox" name="news" id="filter-news" checked>
                         <label for="filter-news">Новости</label>
                     </li>
-                    <li>
-                        <input type="checkbox" name="gallery" id="filter-gallery">
+                    <li class="filter-option filter-checkbox">
+                        <input class="filter-input-checkbox filter-input" type="checkbox" name="gallery" id="filter-gallery">
                         <label for="filter-gallery">Галерея</label>
                     </li>
-                    <li>
-                        <input type="checkbox" name="cart" id="filter-cart">
+                    <li class="filter-option filter-checkbox">
+                        <input class="filter-input-checkbox filter-input" type="checkbox" name="cart" id="filter-cart">
                         <label for="filter-cart">Корзина</label>
                     </li>
                 </ul>
             </fieldset>
-            <button type="submit">Показать</button>
+            <button class="button filter-button" type="submit">Показать</button>
         </form>
     </section>
 
@@ -103,18 +106,22 @@
                 <a href="#">По названию</a>
             </li>
             <li>
-                <a href="#top"></a>
+                <a href="#top">
+                  <img src="img/icons/icon-up.svg">
+                </a>
             </li>
             <li>
-            <a href="#bottom"></a>
+            <a href="#bottom">
+              <img src="img/icons/icon-down.svg">
+            </a>
             </li>
         </ul>
     </section>
 
-    <section>
+    <section class="catalog" >
         <h2>Товары</h2>
-        <ul>
-            <li>
+        <ul class="catalog-list">
+            <li class="catalog-item">
                 <a href="blank.html">
                     <h3>Sedona</h3>
                 </a>
@@ -123,10 +130,10 @@
                         <img src="img/products/sedona.png" width="360" height="580" alt="sedona">
                     </p>
                 <p>
-                  <button type="buton">9 900 руб</button>  
+                  <button class="button" type="buton">9 900 руб</button>  
                 </p>
             </li>
-            <li>
+            <li class="catalog-item">
                 <a href="blank.html">
                     <h3>Pink App</h3>
                 </a>
@@ -135,10 +142,10 @@
                         <img src="img/products/pink.png" width="360" height="580" alt="pink app">
                     </p>
                 <p>
-                  <button type="buton">9 900 руб</button>  
+                  <button class="button" type="buton">9 900 руб</button>  
                 </p>
             </li>
-            <li>
+            <li class="catalog-item">
                 <a href="blank.html">
                     <h3>Barbershop</h3>
                 </a>
@@ -147,10 +154,10 @@
                         <img src="img/products/borodinski.png" width="360" height="580"  alt="borodinski">
                     </p>
                 <p>
-                  <button type="buton">9 900 руб</button>  
+                  <button class="button" type="buton">9 900 руб</button>  
                 </p>
             </li>
-            <li>
+            <li class="catalog-item">
                 <a href="blank.html">
                     <h3>Mishka</h3>
                 </a>
@@ -159,10 +166,10 @@
                         <img src="img/products/mishka.png" width="360" height="580"  alt="mishka">
                     </p>
                 <p>
-                  <button type="buton">9 900 руб</button>  
+                  <button class="button" type="buton">9 900 руб</button>  
                 </p>
             </li>
-            <li>
+            <li class="catalog-item">
                 <a href="blank.html">
                     <h3>A plus</h3>
                 </a>
@@ -171,10 +178,10 @@
                         <img src="img/products/a_plus.png" width="360" height="580" alt="a plus">
                     </p>
                 <p>
-                  <button type="buton">9 900 руб</button>  
+                  <button class="button" type="buton">9 900 руб</button>  
                 </p>
             </li>
-            <li>
+            <li class="catalog-item">
                 <a href="blank.html">
                     <h3>Кваст</h3>
                 </a>
@@ -183,20 +190,20 @@
                         <img src="img/products/kvast.png" width="360" height="580" alt="kvast">
                     </p>
                 <p>
-                  <button type="buton">9 900 руб</button>  
+                  <button class="button" type="buton">9 900 руб</button>  
                 </p>
         </ul>
-        <ul>
-            <li>
+        <ul class="pagination-list">
+            <li class="pagination-item pagination-item-current">
               <a>1</a>
             </li>
-            <li>
+            <li class="pagination-item">
               <a href="#">2</a>
             </li>
-            <li>
+            <li class="pagination-item">
               <a href="#">3</a>
             </li>
-            <li>
+            <li class="pagination-item pagination-item-next">
               <a href="#">Следующая</a>
             </li>
           </ul>
@@ -205,46 +212,50 @@
 
   </main>
 
-  <footer>
-
-    <section>
-        <h2>Контакты</h2>
-        <p>
-          наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург
-        </p>
-       <a href="tel:+78005558628">+7 800 555-86-28</a>
-       <p>
-       <a href="#">Напишите нам</a>
+  <footer class="main-footer">
+    <section class="footer-contacts">
+      <h2>Контакты</h2>
+      <p>
+        наб. Реки Карповки,<br> 5 лит П, Санкт-Петербург
       </p>
-      </section>
-  
-      <section>
-        <h2>Карта</h2>
-        <!---Здесь будет карта -->
-      </section>
+     <a class="footer-phone" href="tel:+78005558628">+7 800 555-86-28</a>
+     <p>
+     <a class="button" href="#">Напишите нам</a>
+    </p>
+    </section>
+
+    <section class="footer-map">
+      <h2>Карта</h2>
+      <!---Здесь будет карта -->
+    </section>
     
-    <section>
+    <section class="footer-social">
       <h2>Социальные сети</h2>
-      <ul>
+      <ul class="social-list">
         <li>
-          <a href="#">Вконтакте</a>
+          <a class="button social-button" href="#">
+            <img src="img/icons/vk.svg">
+          </a>
         </li>
         <li>
-          <a href="#">Фейсбук</a>
+          <a class="button social-button"  href="#">
+            <img src="img/icons/facebook.svg">
+          </a>
         </li>
         <li>
-          <a href="#">Инстаграм</a>
+          <a class="button  social-button"  href="#">
+            <img src="img/icons/insta.svg">
+          </a>
         </li>
       </ul>
-      <p>
-        <h3>Давайте дружить,это выгодно!</h3>
-      </p>
+      <div class="footer-text">
+        <h3>Давайте дружить, это выгодно!</h3>
       <p>
         скидка 10% для друзей из социальных сетей
       </p>
+    </div>
     </section>
   </footer>
-
 
 </body>
 
